@@ -51,7 +51,7 @@ void merge(int* arr, int s, int e)
       arr[mainIndex++]=right[rightIndex++];
   }
   delete [] left;
-  delete [] right
+  delete [] right;
 }
 void mergeSort(int* arr, int s, int e)
 {
