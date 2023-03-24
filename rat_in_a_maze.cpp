@@ -23,8 +23,6 @@ else
    }
  }
 
-
-
 void solveMaze(int arr[][3],int row, int col,int srcx,int srcy,vector<string> &path, vector<vector<bool> > &visited, string output)
 {
   //Base Case
@@ -91,6 +89,12 @@ int main() {
                 {1,1,1}};
                 int row=3;
                 int col=3;
+      //Edge case
+      if(arr[0][0]==0)
+      {
+        cout<<"No path exists";
+        return 0;
+      }
   //For storing all the possible answers
    vector<string> path;
    //storing the possible option after each call
@@ -99,13 +103,18 @@ int main() {
    vector<vector<bool> > visited(row,vector<bool>(col,false));
    visited[0][0]=1;
    solveMaze(arr,row,col,0,0,path,visited,output);
-
+ //Edge case
+   if(path.size()==0)
+   {
+     cout<<"No path exists";
+     return 0;
+   }
    for(auto i: path)
    {
      cout<<i<<" ";
    }
    cout<<endl;
-
+   
 
   return 0;
 }
