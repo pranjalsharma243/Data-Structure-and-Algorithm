@@ -1,6 +1,6 @@
 class Solution {
 public:
-   ListNode* ReverseList(ListNode* prev,ListNode* curr)
+   ListNode* ReverseList(ListNode* &prev,ListNode* &curr)
    {
      if(curr==NULL)
      {
